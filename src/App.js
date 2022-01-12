@@ -6,6 +6,7 @@ import Nav from "./Nav";
 import Auth from "./Auth/Auth";
 import Callback from "./Callback";
 import Ipfs from "./Ipfs";
+import Wallet from "./Wallet";
 
 class App extends Component {
   constructor(props) {
@@ -36,6 +37,10 @@ class App extends Component {
           } 
           />
           <Route path="/ipfs" component={Ipfs} />
+          <Route
+            path="/wallet"
+            render={props => <Wallet auth={this.auth} {...props} />}
+          />
         </div>
       </>
     );

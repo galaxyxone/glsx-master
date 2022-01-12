@@ -24,7 +24,7 @@ const app = express();
 
 app.get("/ipfs", function(req, res) {
     res.json({
-        message: "Hello from a public API!"
+        message: "Hello from a public API! ie website, webstore"
     });
 });
 

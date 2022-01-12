@@ -16,6 +16,11 @@ class Nav extends Component {
           <li>
             <Link to="/ipfs">IPFS</Link>
           </li>
+            {isAuthenticated() && (
+              <li>
+                <Link to="/wallet">Wallet</Link>
+          </li>
+            )}
           <li>
             <button onClick={isAuthenticated() ? logout : login}>
               {isAuthenticated() ? "Log Out" : "Log In"}
